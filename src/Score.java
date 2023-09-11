@@ -15,13 +15,19 @@ public class Score extends Rectangle{
     }
 
     public void draw(Graphics g){
+        Graphics2D g2d = (Graphics2D) g;
         g.setColor(Color.white);
-        g.setFont(new Font("Consolas", Font.PLAIN, 60));
+        g.setFont(new Font("Consolas", Font.PLAIN, 50));
 
-        g.drawLine(GAME_WIDTH/2, 0, GAME_WIDTH/2, GAME_HEIGTH);
+        //g.drawLine(GAME_WIDTH/2, 0, GAME_WIDTH/2, GAME_HEIGTH);
 
-        g.drawString(String.valueOf(player1/10)+String.valueOf(player1%10), (GAME_WIDTH/2)-85, 50);
-        g.drawString(String.valueOf(player2/10)+String.valueOf(player2%10), (GAME_WIDTH/2)+20, 50);
+        Stroke dashed = new BasicStroke(4, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 0, new float[]{16}, 30);
+        g2d.setStroke(dashed);
+        g2d.drawLine(GAME_WIDTH/2, 0, GAME_WIDTH/2, GAME_HEIGTH);
+
+        g.drawString(String.valueOf(player1), (GAME_WIDTH/2)-115, 50);
+        g.drawString(String.valueOf(player2), (GAME_WIDTH/2)+95, 50);
+
 
     }
 
