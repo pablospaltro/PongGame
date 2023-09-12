@@ -17,11 +17,11 @@ public class Score extends Rectangle{
     public void draw(Graphics g){
         Graphics2D g2d = (Graphics2D) g;
         g.setColor(Color.white);
-        g.setFont(new Font("Consolas", Font.PLAIN, 50));
+        g.setFont(new Font("Consolas", Font.PLAIN, 60));
 
         //g.drawLine(GAME_WIDTH/2, 0, GAME_WIDTH/2, GAME_HEIGTH);
 
-        Stroke dashed = new BasicStroke(4, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 0, new float[]{16}, 30);
+        Stroke dashed = new BasicStroke(4, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 0, new float[]{14}, 30);
         g2d.setStroke(dashed);
         g2d.drawLine(GAME_WIDTH/2, 0, GAME_WIDTH/2, GAME_HEIGTH);
 
